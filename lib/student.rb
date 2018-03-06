@@ -43,7 +43,7 @@ class Student
     new_student.save
     new_student
   end
-  def find_by_name(name)
+  def self.find_by_name(name)
     sql = <<-SQL
       SELECT * FROM students WHERE name = ?
     SQL
